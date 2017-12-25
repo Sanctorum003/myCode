@@ -41,5 +41,12 @@
         "xstring": "cpp",
         "xtr1common": "cpp",
         "xutility": "cpp"
-    }
+    },
+
+    "[cpp]": {
+    "editor.quickSuggestions": true
+        },
+    "[c]": {
+    "editor.quickSuggestions": true
+        }
 }
