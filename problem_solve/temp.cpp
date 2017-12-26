@@ -3,11 +3,14 @@
 #include <algorithm>
 #include <vector>
 #include <stack>
+#include <queue>
 using namespace std;
 
 int main(void)
 {
     stack<int> s;
     vector<int> v;
-    return 0;
+    queue<int> q;
+    cout<<q.empty()<<endl;
+    
 }

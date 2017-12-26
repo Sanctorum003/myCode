@@ -48,5 +48,6 @@
         },
     "[c]": {
     "editor.quickSuggestions": true
-        }
-}
+        },
+        "git.ignoreLimitWarning": true
+    }
