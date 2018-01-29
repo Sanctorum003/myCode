@@ -1,4 +1,5 @@
-a = ['1','2','3','4','5']
+def greet_user(username):
+    """显示简单的问候语""" #文档字符串（docstring）
+    print("Hello!" + username.title())
 
-print(a)
-print(a[-1])
+greet_user("lsc") 
