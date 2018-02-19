@@ -229,3 +229,138 @@ greet_user("lsc")
 ```
 
 2.传递实参
+> 1.位置实参:按参数的位置来关联
+
+> 2.关键字实参:利用键值来赋值，无需位置顺序
+
+> 3.默认值
+
+3.返回值
+
+4.传递列表
+> 传递列表副本
+```python
+function_name(list_name[:])
+```
+
+5.传递任意数量的实参
+```python
+def make_pizza(*toppings): # 创建一个名为toppings的空元组，并将受到的所有值都封装到这个元组中。
+    """打印顾客点的所有调料"""
+    print(toppings)
+
+make_pizza('pepperoni')
+make_pizza('mushrooms','green peppers','extra cheese')
+```
+```python
+**user_info # 创建一个名为user_info的空字典，并将受到的所有键值对都封装到这个元组中。
+```
+
+6.将函数存储在模块中
+> 1.使用**import**导入模块
+
+> 2.调用方法：**module_name.function_name()**
+
+> 3.导入特定的函数：**from module_name import function_0,function_1,function_2**
+
+> 4.使用as给函数指定别名：**from module_name import function_name as fn**
+
+> 5.使用as给模块指定别名：**import module_name as mn**
+
+> 6.导入模块中的所有函数：**from module_name import \***
+
+# 8-类
+1.定义和创建实例
+```python
+class Dog():
+    # 构造函数
+    def __init__(self, name, age):  #每个类函数必须有参数self,程序员不必赋值，代表类本身
+        self.name = name  
+        self.age = age 
+    
+    def sit(self):
+        print(self.name + " sit")
+
+    def askAge(self):
+        print(self.name + ':' + self.age)
+
+dog = Dog('lsc','21')
+dog.sit()
+dog.askAge()
+```
+2.继承
+```python
+class ElectricCar(Car): #继承Car的ElectricCar
+ """电动汽车的独特之处"""
+
+    def __init__(self, make, model, year):
+        """初始化父类的属性"""
+        super().__init__(make, model, year) #调用父类的构造函数 super()
+
+my_tesla = ElectricCar('tesla', 'model s', 2016)
+print(my_tesla.get_descriptive_name()) 
+```
+
+3.重写父类的方法
+> 在子类中写一个同名函数
+
+4.python中没有**new**,创建实例直接**ClassName(paras)**
+
+5.导入类
+```python
+from module_name import ClassName # 从某个模块导入某个类
+import module_name # 导入整个模块
+from module_name import * #导入模块中的所有类
+```
+
+# 9-文件和异常
+1.读取全部文件
+```python
+# with 块的作用是 在不需要访问文件后将其关闭
+# 不使用with块需要使用open()配合close()
+with open("pi_digits") as file_object
+    contents = file_object.read() # read()的作用是读取这个文件的全部内容
+    print(contents.rstrip()) # read()到达文末会返回一个空字符串，表现为空行。可以使用 rstrip()来去除
+```
+
+2.逐行读取文件
+```python
+with open("pi_digits.txt") as file_object:
+    for line in file_object: #遍历文本对象
+        print(line.rstrip())
+```
+
+3.利用文件创建列表
+```python
+with open("pi_digits.txt") as file_object:
+    print(file_object.readlines()) # readlines() 返回一个列表
+```
+
+4.写入空文件
+```python
+with open("1.txt","w") as file_object: # 有"w","a"等模式
+    file_object.write("123")
+# 注意python只能在文件中写入字符串
+```
+5.异常检测
+```python
+try:
+    语句块1
+except 异常类型:
+    语句块2
+else:
+    语句块2
+```
+
+5.占位符
+> pass 什么都不做
+
+6.以JSON方式存储数据
+```python
+import json 
+
+json.dump(信息,文件) # 存储文件
+json.load(文件) # 读取文件 
+```
+
+
