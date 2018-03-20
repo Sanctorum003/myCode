@@ -2,15 +2,12 @@
  #include <queue>
  #include <vector>
  #include <algorithm>
+ #include <cstring>
  using namespace std;
 
  int main(void)
  {
-     cout.setf(ios_base::boolalpha);
-     queue<int> que;
-     vector<int> v;
-     v.
-     bool a = 1;
-     cout<<a;
+     int a[10] = {0};
+     cout<<sizeof(a)<<endl;
      return 0;
  }
