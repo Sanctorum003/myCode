@@ -35,9 +35,9 @@ int main(void)
             
         }
 
-        for(int i = 0; i<n; ++i)
-            cout<<b[i]<<" ";
-        cout<<endl;
+        // for(int i = 0; i<n; ++i)
+        //     cout<<b[i]<<" ";
+        // cout<<endl;
 
         //b 1 1 2
         //a 1 1 2
