@@ -7,7 +7,6 @@ int main(void)
 	int n;
 	vector<int> v;
 	cin>>n;
-	
 	int c = 2;
 	
 	while(c <= n)
