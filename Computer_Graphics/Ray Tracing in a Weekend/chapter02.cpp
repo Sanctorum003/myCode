@@ -26,4 +26,6 @@ int main()
             cout << ir << " " << ig << " " << ib << "\n";  
         }  
     }  
+
+    return 0;
 }  

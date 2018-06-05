@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
-// -127x + 97y = 1
+
+/* -127x + 97y = 1*/
 // int exgcd(int a,int b,int &x,int &y)
 // {
 //     if(b == 0)
