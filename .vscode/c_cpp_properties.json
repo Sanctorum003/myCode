@@ -37,7 +37,10 @@
         {
             "name": "Win32",
             "includePath": [
-                "D:\\Mingw\\lib\\gcc\\mingw32\\6.3.0\\include\\*"
+                "D:/Mingw/lib/gcc/mingw32/6.3.0/include/c++",
+                "D:/Mingw/lib/gcc/mingw32/6.3.0/include/c++/mingw32",
+                "D:/Mingw/include",
+                "D:/Mingw/lib/gcc/mingw32/6.3.0/include"
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
