@@ -12,7 +12,7 @@ int main()
     freopen("chapter02.ppm", "r", stdin);  
     freopen("chapter02.ppm", "w", stdout);//file i/o
   
-    cout << "P3\n" << nx << " " << ny << "\n255\n";  
+    cout << "P3\n" << nx << " " << ny << "\n255\n";  1
     for (int j = ny-1; j >= 0; j--)  
     {  
         for (int i = 0; i < nx; i++)  

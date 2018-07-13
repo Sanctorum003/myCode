@@ -2,14 +2,18 @@
 #include <cstdio>
 using namespace std;
 
-int main()
+int main(void)
 {
-    freopen("chapter01.txt", "r", stdin);  
-    freopen("chapter01.txt", "w", stdout);//file i/o
+    freopen("chapter01.ppm", "r", stdin);  
+    freopen("chapter01.ppm", "w", stdout);//file i/o
 
-    int nx = 200;
+    int nx = 200;                          
     int ny = 100;
-    cout<<"P3\n"<<nx<<" "<<ny<<"\n255\n";
+     // "P3" means this is a RGB color image in ASCII
+     // "nx ny" is the width and height of the image in pixels
+     // "255" is the maximum value for each color                          
+    cout<<"P3\n"<<nx<<" "<<ny<<"\n255\n"; 
+     // The part below is image data: RGB triplets
     for(int j = ny-1;j>=0;--j){
         for(int i = 0; i < nx; ++i){
             float r = float(i) / float(nx);
