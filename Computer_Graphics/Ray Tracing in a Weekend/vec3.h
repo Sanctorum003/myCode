@@ -6,7 +6,7 @@
 #include <iostream>
 
 class vec3  {
-
+//using for xyz or rgb
     
 public:
     vec3() {}
