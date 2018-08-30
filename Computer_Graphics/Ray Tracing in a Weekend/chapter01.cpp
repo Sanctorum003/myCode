@@ -3,11 +3,11 @@
 using namespace std;
 
 int main(void)
+    int nx = 200;
 {
     freopen("chapter01.ppm", "r", stdin);  
     freopen("chapter01.ppm", "w", stdout);//file i/o
-
-    int nx = 200;                          
+                          
     int ny = 100;
      // "P3" means this is a RGB color image in ASCII
      // "nx ny" is the width and height of the image in pixels

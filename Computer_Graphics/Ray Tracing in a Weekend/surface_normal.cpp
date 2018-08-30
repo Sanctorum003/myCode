@@ -17,7 +17,7 @@ float hit_sphere(const vec3 &center, float radius, const ray &r)
         return -1;//无交点舍弃，取无意义值-1
     }
     else{
-        return(-b-sqrt(discriminant))/(2*a);
+        return (-b-sqrt(discriminant))/(2*a);
     }
 }
 
@@ -57,7 +57,7 @@ int main(void)
             float u = float(i) / float(nx);
             float v = float(j) / float(ny);
 
-            //简直一条以原点以起点与图片上某一点相交的射线
+            //一条以原点以起点与图片上某一点相交的射线
             ray r(vec3(0, 0, 0), lower_left_corner + u * horizontal + v * vertical);
             vec3 col = color(r);
 
