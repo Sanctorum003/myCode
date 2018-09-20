@@ -1,47 +1,29 @@
-#include <iostream>
-#include <vector>
-using namespace std;
-void replace(vector<int> &v,int i,int j)
+
+
+//冒泡排序
+void Exchange(int a[],int i,int j)
 {
-    int temp = v[i];
-    v[i] = v[j];
-    v[j] = temp;
+    int temp = a[i];
+    a[i] = a[j];
+    a[j] =temp;
 }
 
-void bubbleSort(vector<int> &v)
+void BubbleSort(int a[], int n)
 {
-    for(int i = v.size()-1;i>=0;--i)
+    for(int i = 1; i<=n;++i)
     {
-        for(int j = 0;j < i;++j)
+        bool flag = false;
+        for(int j = n; j > i ;--j)
         {
-            if(v[j] > v[j+1])
-                replace(v,j,j+1);
+            if(a[j] < a[j-1])
+            {
+                Exchange(a,j-1,j);
+                flag = true;
+            }
         }
 
-    }
-}
-
-int main(void)
-{
-    vector<int> v;
-    int n;
-    int temp;
-    cin>>n;
-    while(n--)
-    {
-        cin>>temp;
-        v.push_back(temp);
-    }
-    
-    bubbleSort(v);
-
-    for(int i = 0; i < v.size();++i)
-    {
-        if(i != v.size()-1)
-            cout<<v[i]<<" ";
-        else
-            cout<<v[i];
+    if(flag == false)
+        return; 
     }
 
-    return 0;
 }

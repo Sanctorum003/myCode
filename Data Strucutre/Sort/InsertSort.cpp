@@ -1,47 +1,17 @@
-#include <iostream>
-#include <vector>
-using namespace std;
-void replace(vector<int> &v,int i,int j)
+//普通插入排序
+void InsertSort(int a[],int n)
 {
-    int temp = v[i];
-    v[i] = v[j];
-    v[j] = temp;
-}
-
-void InsertSort(vector<int> &v)
-{
-    for(int i = v.size()-1;i>=0;--i)
+    int i,j;
+    for(i = 2; i <= n;++i)
     {
-        for(int j = 0;j < i;++j)
+        if(a[i]<a[i-1])//需排序
         {
-            if(v[j] > v[j+1])
-                replace(v,j,j+1);
-        }
-
+            a[0] = a[i];
+            for(j = i-1; a[j] > a[0]; --j)
+            {
+                a[j+1]=a[j];
+            }
+            a[j+1] = a[0];
+        }   
     }
-}
-
-int main(void)
-{
-    vector<int> v;
-    int n;
-    int temp;
-    cin>>n;
-    while(n--)
-    {
-        cin>>temp;
-        v.push_back(temp);
-    }
-    
-    InsertSort(v);
-
-    for(int i = 0; i < v.size();++i)
-    {
-        if(i != v.size()-1)
-            cout<<v[i]<<" ";
-        else
-            cout<<v[i];
-    }
-
-    return 0;
 }
