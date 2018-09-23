@@ -1,5 +1,3 @@
-
-
 //冒泡排序
 void Exchange(int a[],int i,int j)
 {
