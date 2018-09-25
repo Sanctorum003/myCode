@@ -13,6 +13,8 @@ void SelectSort(int a[],int n);
 void HeapSort(int a[],int n);
 void HeapAdjust(int a[],int n);
 void HeapInsert(int a[],int key,int n);
+void MergeSort(int a[],int low,int high);
+void MergeSortNoRecurse(int a[],int n );
 
 void Display(int a[],int n)
 {
@@ -44,6 +46,10 @@ int main(void)
         SelectSort(a,N);
     else if(s == "heap")
         HeapSort(a,N);
+    else if(s == "me")
+        MergeSort(a,1,N);
+    else if(s == "mn")
+        MergeSortNoRecurse(a,N);
 
     // HeapAdjust(a,N);
 

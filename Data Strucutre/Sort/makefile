@@ -1,2 +1,2 @@
-MainSort:HalfInsert.cpp  InsertSort.cpp BubbleSort.cpp ShellSort.cpp QuickSort.cpp TriCutSort.cpp SelectSort.cpp HeapSort.cpp
-	g++ -o sort.out MainSort.cpp HalfInsert.cpp InsertSort.cpp BubbleSort.cpp ShellSort.cpp QuickSort.cpp TriCutSort.cpp SelectSort.cpp HeapSort.cpp
+MainSort:HalfInsert.cpp  InsertSort.cpp BubbleSort.cpp ShellSort.cpp QuickSort.cpp TriCutSort.cpp SelectSort.cpp HeapSort.cpp MergeSort.cpp MergeSortNoRecurse.cpp
+	g++ -o sort.out MainSort.cpp HalfInsert.cpp InsertSort.cpp BubbleSort.cpp ShellSort.cpp QuickSort.cpp TriCutSort.cpp SelectSort.cpp HeapSort.cpp MergeSort.cpp MergeSortNoRecurse.cpp
