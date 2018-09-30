@@ -22,22 +22,45 @@ void get_Next(char sub[], int len ,int next[])
             next[j] = k;// 第j项为k 
                          // 就是不匹配时 Next[j] = 0;
                          // 匹配时 Next[j] = k+1;
-            cout<<j;
         }
         else
             k = next[k]; //不匹配则利用已有next数组回溯
     }
 }
 
+int KMP(char str[], int str_len,char sub[],int sub_len,int next[],int pos)
+{
+    //sub 在 str 中 从第pos位置开始是否匹配
+    int i = pos;//用于str
+    int j = 0;// 用于sub
+    while(i < str_len && j < sub_len)
+    {
+        if(j == -1 || str[i] == sub[j]) //目前全不匹配到下一位开始重新开始匹配 || 当前字符匹配
+        {
+            ++i;++j;
+        }
+        else
+        {
+            j = next[j]; // sub用next回溯
+        }
+    }
+
+    if( sub_len = j )//说明完全匹配
+        return i - sub_len; // 找到匹配的位置
+    else //否侧不匹配
+        return -1;
+}
 
 int main(void)
 {
-    char s[] = {'a','b','a','a','b','c','a','c'};
-    int next[8]={0};
-    get_Next(s,8,next);
+    char s[] = {'a','b','c','a','b','a','a','a','b','a','a','b','c','a','c'};
+    char t[] = {'a','b','a','a','b','c','a','c'};
+    int next[13]={0};
+    get_Next(s,13,next);
     cout<<endl;
-    for(int i=0;i<8;++i)
+    for(int i=0;i<13;++i)
         cout<<next[i]<<" ";
     cout<<endl;
+    cout<<KMP(s,13,t,5,next,0)<<endl;
     return 0;
 }
