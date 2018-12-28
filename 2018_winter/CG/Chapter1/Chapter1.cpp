@@ -4,16 +4,16 @@ using namespace std;
 
 int main(){
 
-    freopen("chapter01.ppm", "r", stdin);  
-    freopen("chapter01.ppm", "w", stdout);//file i/o
+    freopen("chapter1.ppm", "r", stdin);  
+    freopen("chapter1.ppm", "w", stdout);//file i/o
 
     int nx = 200;
     int ny = 100;
 
     cout<<"P3"<<endl<<nx<<" "<<ny<<endl<<"255"<<endl;
-    for(int i = nx-1;i>=0;--i)
+    for(int j = ny-1;j>=0;--j)
     {
-        for(int j = 0; j <ny;++j)
+        for(int i = 0; i <nx;++i)
         {
            float r = float(i)/float(nx);
            float g = float(j)/float(ny);
