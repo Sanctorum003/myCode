@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <stack>
 using namespace std;
 
 int main(void)
@@ -17,5 +18,7 @@ int main(void)
             cout<<" ";
     }
     cout<<endl;
+    stack<int> s;
+    s.
     return 0;
 }

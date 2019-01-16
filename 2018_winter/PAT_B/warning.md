@@ -25,6 +25,28 @@ sort(v.begin(),v.end(),cmp);
 //sort用法
 ```
 
+# 1024
+```cpp
+//模板函数：将string类型变量转换为常用的数值类型（此方法具有普遍适用性）  
+#include <sstream>  
+template <class Type>  
+Type stringToNum(const string& str)  
+{  
+    istringstream iss(str);  
+    Type num;  
+    iss >> num;  
+    return num;      
+}  
+```
+
+
+#1031
+```
+#include <cctype>
+
+ if(!isdigit(string[j]))//判断是否是数字
+```
+
 # 1036
 ```cpp
 //C语言中实现四舍五入: 
