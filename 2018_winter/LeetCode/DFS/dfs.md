@@ -1,3 +1,9 @@
+> 101.Symmetric Tree
+```cpp
+(r1->val == r2->val) && isSymmetric(r1->right,r2->left) && isSymmetric(r1->left,r2->right);
+//判断树是否对称，关键是 每对节点 左孩子==有孩子 右孩子==左孩子
+```
+
 > 108
 ```cpp
 TreeNode* sortedArrayToBST(vector<int>& nums,int low,int high)
