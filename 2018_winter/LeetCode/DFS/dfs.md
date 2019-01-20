@@ -25,3 +25,6 @@ TreeNode* sortedArrayToBST(vector<int>& nums,int low,int high)
 //c++ string之间连接 用 **+**
 ```
 
+# 513. 找树左下角的值
+> string转int 可以使用std::stoi/stol/stoll等等函数
+
