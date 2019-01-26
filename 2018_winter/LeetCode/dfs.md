@@ -19,6 +19,12 @@ TreeNode* sortedArrayToBST(vector<int>& nums,int low,int high)
 # 111 
 >首先判空，若当前结点不存在，直接返回0。然后看若左子结点不存在，那么对右子结点调用递归函数，并加1返回。反之，若右子结点不存在，那么对左子结点调用递归函数，并加1返回。若左右子结点都存在，则分别对左右子结点调用递归函数，将二者中的较小值加1返回即可， 
 
+# 200. 岛屿的个数
+```cpp
+vector<vector<int> > newOne(r, vector<int>(c, 0));
+// r*c 且值为0
+```
+
 # *257
 ```cpp
 //非递归后续遍历太烦了，不好实现
@@ -27,4 +33,7 @@ TreeNode* sortedArrayToBST(vector<int>& nums,int low,int high)
 
 # 513. 找树左下角的值
 > string转int 可以使用std::stoi/stol/stoll等等函数
+
+# 515. 在每个树行中找最大值
+> vector::clear //清空容器
 

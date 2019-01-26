@@ -1,3 +1,33 @@
+# 53. 最大子序和
+```cpp
+#include <limits.h>
+INT_MAX
+INT_MIN
+```
+# 64. 最小路径和
+```cpp
+if(i == 0 && j == 0) dp[i][j] = grid[i][j];
+else if(i == 0) dp[i][j] = dp[i][j-1] + grid[i][j];
+else if(j == 0) dp[i][j] = dp[i-1][j] + grid[i][j];
+else dp[i][j] = min(dp[i][j-1] + grid[i][j],dp[i-1][j] + grid[i][j]);
+```
+
+# 70. 爬楼梯
+简单的dp
+```cpp
+dp[0] = 1; // 用于使得状态转移方程成立
+dp[1] = 1;
+dp[i] = dp[i-1] + dp[i-2];
+```
+
+# 121. 买卖股票的最佳时机
+```cpp
+dp[i] = max(dp[i-1],prices[i]-maxNum[i-1]); 
+//动态规划 前i天的最大收益 = max{前i-1天的最大收益，第i天的价格-前i-1天中的最小价格}
+maxNum[i] = min(maxNum[i-1],prices[i]);
+//i天内的最小价格
+```
+
 # 322. 零钱兑换
 https://leetcode-cn.com/problems/coin-change/  
 关键点 建立状态存储数组 找转移方程
