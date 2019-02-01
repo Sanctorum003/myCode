@@ -27,6 +27,21 @@ dp[i] = max(dp[i-1],prices[i]-maxNum[i-1]);
 maxNum[i] = min(maxNum[i-1],prices[i]);
 //i天内的最小价格
 ```
+# 198. 打家劫舍
+```cpp
+a[0] = nums[0];
+a[1] = max(nums[0],nums[1]);
+a[i] = max(a[i-1],a[i-2]+nums[i]);
+```
+# 213. 打家劫舍 II
+```cpp
+for(int i = 2; i < n-1; ++i)
+    a[i] = max(a[i-1],a[i-2]+nums[i]);       
+for(int i = 3; i < n ; ++i)
+    b[i] = max(b[i-1],b[i-2]+nums[i]);
+//对0~n-2和1~n-1号元素分别dp.取两者的最大值。因为只有这两种可能
+```
+# **337. 打家劫舍 III
 
 # 322. 零钱兑换
 https://leetcode-cn.com/problems/coin-change/  
