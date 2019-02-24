@@ -3,7 +3,21 @@
 #include <limits.h>
 INT_MAX
 INT_MIN
+
+//连续自序和，所以主要目标是找到里面所有子序列中最大的
+int res = INT_MIN;
+int curSum = 0; // 注意这里是0
+curSum = max(curSum+nums[i],nums[i]);//加上当前位置的值，是否会变小。变小则重新计算curSum
+res = max(res,curSum);.//取出最大的子序列
 ```
+# 62、63 不同路径
+```cpp
+//二维dp 爬楼扩展
+//每个位置初试为0 [0][0]为1
+//对每个位置考察上方和左方是否可通（对于障碍跳过），
+//通者，加上前一位置的条数
+```
+
 # 64. 最小路径和
 ```cpp
 if(i == 0 && j == 0) dp[i][j] = grid[i][j];
@@ -19,6 +33,21 @@ dp[0] = 1; // 用于使得状态转移方程成立
 dp[1] = 1;
 dp[i] = dp[i-1] + dp[i-2];
 ```
+
+# 120. 三角形最小路径和
+```cpp
+//取容器中的最大最小值
+//*max(min)_element(first,end,cmp);
+return *min_element(vv.back().begin(), vv.back().end());//vv为二维vector
+//返回二维vector中最后一行中的最小值
+```
+
+```cpp
+triangle[i][j] += min(triangle[i - 1][j - 1], triangle[i - 1];//状态转移方程成立
+```
+
+# 221 最大正方形
+
 
 # 121. 买卖股票的最佳时机
 ```cpp
