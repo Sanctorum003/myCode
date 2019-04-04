@@ -56,7 +56,6 @@ a = (int)(a+0.5)
 
 # 1086
 > 1) vector
-
 > 2) reverse(v.begin(),v.end());
 
 # 1091
