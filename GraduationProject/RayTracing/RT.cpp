@@ -45,7 +45,7 @@ int main(void)
     cout<<255<<endl;
 
     //设置相机
-    camera cam(vec3(-2,2,1),vec3(0,0,-1),vec3(0,1,0),30,2);
+    camera cam(vec3(-2,2,1),vec3(0,0,-1),vec3(0,0,0),30,2);
 
     //设置多个物体
     hitable *list[5];
